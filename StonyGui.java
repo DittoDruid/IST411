@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stony;
+package Stony;
 import javax.swing.JPanel;
 import javax.swing.*;
 import java.awt.*;
@@ -30,8 +30,9 @@ public class StonyGui extends JFrame implements ActionListener
 {
     
     private Container contentPane;
-    private JPanel loginPanel;
+    private JPanel loginPanel,mainPanel;
     private JLabel loginPrompt, passPrompt;
+    private JButton enterButton;
     private JTextField login, password;
 public StonyGui (String title)
    {
@@ -53,18 +54,43 @@ public StonyGui (String title)
    private void buildLoginPanel()
    {
        loginPanel = new JPanel();
-       loginPanel.setLayout(new BorderLayout());
+       loginPanel.setLayout(new BoxLayout(loginPanel, BoxLayout.PAGE_AXIS));
         //titlePanel.setOpaque(false);
-       loginPanel.setBackground(Color.blue);
+       loginPanel.setBackground(Color.cyan);
+       login= new JTextField();
+       password= new JTextField();
+       enterButton = new JButton("Enter");
+       enterButton.addActionListener(this);
        loginPrompt = new JLabel("Please Enter Login ID");
        passPrompt = new JLabel ("Please Enter Password");
+       loginPanel.add(Box.createRigidArea(new Dimension(0,130)));
        loginPanel.add("North", loginPrompt);
+       loginPanel.add("North", login);
+       loginPanel.add(Box.createRigidArea(new Dimension(0,60)));
+       loginPanel.add("South", passPrompt);
+       loginPanel.add("South", password);
+       loginPanel.add(Box.createRigidArea(new Dimension(0,80)));
+       loginPanel.add("South",enterButton);
+       contentPane.add(loginPanel);
+   }
+   
+   private void buildMainWindow()
+   {
+       mainPanel= new JPanel();
+       
+       mainPanel.setSize(400,600);	
+       mainPanel.setVisible(true);		
+       mainPanel.setLocation(15,75);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
        
    }
    
    public void actionPerformed(ActionEvent e)
     {
-
+    if (e.getSource() == enterButton)
+          {
+             buildMainWindow();
+          }
     }
 }
 
