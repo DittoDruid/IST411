@@ -12,4 +12,21 @@ package stny;
  */
 public class UI {
     
+    public void Search(){
+        /*
+        if(){   //Book selected
+            
+        }
+        else if(){  //Video selected
+            
+        }
+        else if(){  //Article selected
+            
+        }
+        else{   //All 
+            
+        }
+        
+        */
+    }
 }
