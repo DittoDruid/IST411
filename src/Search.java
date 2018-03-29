@@ -13,31 +13,26 @@ import java.io.*;
  */
 public class Search {
     
-    public void TextBoxSearch(){
-        
-    }
+    public String TextBoxSearch() throws IOException {
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        String line = input.readLine();
+        return line;
+    } 
     
     public void MaterialSearch(){
         String material = null;
         
-        if(material.equals("Book")){   //Book selected
+        if(material.equals("Books")){   //Book selected
             
         }
-        else if(material.equals("Video")){  //Video selected
+        else if(material.equals("Videos")){  //Video selected
             
         }
-        else if(material.equals("Article")){  //Article selected
+        else if(material.equals("Articles")){  //Article selected
             
         }
         else{   //All is selected.
             
         }        
-    }
-    
-    public String readFromKeyboard() throws IOException {
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-        String line = input.readLine();
-        return line;
     }    
-    
 }
