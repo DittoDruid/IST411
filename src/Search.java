@@ -22,17 +22,17 @@ public class Search {
     public void MaterialSearch(){
         String material = null;
         
-        if(material.equals("Books")){   //Book selected
-            
+        if(material.toLowerCase().equals("books")){   //Book selected
+            String book = "book";
         }
-        else if(material.equals("Videos")){  //Video selected
-            
+        else if(material.toLowerCase().equals("videos")){  //Video selected
+            String video = "video";
         }
-        else if(material.equals("Articles")){  //Article selected
-            
+        else if(material.toLowerCase().equals("articles")){  //Article selected
+            String articles = "article";
         }
         else{   //All is selected.
-            
+            String all = material;
         }        
     }    
 }
