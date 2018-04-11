@@ -7,12 +7,12 @@ import java.awt.event.ActionListener;
 public class login {
     private JPanel panel1;
     private JLabel passwordLabel;
-    private JPasswordField passwordField1;
-    private JTextField textField1;
+    private JPasswordField passwordField;
+    private JTextField usernameField;
     private JLabel usernameLabel;
     private JButton loginButton;
     private JButton cancelButton;
-
+    private JPanel errorMsg;
 
 
     public static void main(String args[]){
@@ -28,11 +28,28 @@ public class login {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                browse browser = new browse();
-                browser.browse();
+                if((usernameField.getText()).equals("") || (passwordField.getText()).equals("") ){
+                    errorMsg.setVisible(true);
+                }
+                else {
+                    String username = usernameField.getText();
+                    String password = passwordField.getText();
+                    System.out.println(username + password);
+                    browse browser = new browse();
+                    browser.browse();
+                    frame.dispose();
+                }
+
+            }
+        });
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 frame.dispose();
             }
         });
-    }
 
+
+
+    }
 }

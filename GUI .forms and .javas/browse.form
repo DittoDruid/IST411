@@ -15,7 +15,9 @@
             <minimum-size width="500" height="400"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-10987688"/>
+        </properties>
         <border type="none"/>
         <children>
           <grid id="e4ea5" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -26,7 +28,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-9847994"/>
+              <background color="-1"/>
             </properties>
             <border type="none"/>
             <children>
@@ -66,7 +68,9 @@
                 <constraints>
                   <tabbedpane title="Catalog"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <background color="-10987688"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <grid id="2a53e" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -77,11 +81,11 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-5214789"/>
+                      <background color="-1"/>
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="9a23" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+                      <component id="9a23" class="javax.swing.JTextField" binding="browseSearchBox">
                         <constraints>
                           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                             <preferred-size width="150" height="-1"/>
@@ -119,7 +123,7 @@
                           </grid>
                         </constraints>
                       </hspacer>
-                      <component id="cb020" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+                      <component id="cb020" class="javax.swing.JComboBox" binding="materialTypeBox">
                         <constraints>
                           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -139,6 +143,10 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <background color="-6547172"/>
+                          <enabled value="true"/>
+                          <foreground color="-1"/>
+                          <horizontalTextPosition value="0"/>
                           <text value="Search"/>
                         </properties>
                       </component>
@@ -148,17 +156,30 @@
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <foreground color="-14517311"/>
+                    </properties>
                     <border type="none"/>
                     <children>
                       <grid id="c376e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints/>
                         <properties>
-                          <background color="-3448556"/>
+                          <background color="-1"/>
                         </properties>
                         <border type="none"/>
-                        <children/>
+                        <children>
+                          <component id="57a88" class="javax.swing.JTable" binding="browseQueryResults">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="50"/>
+                              </grid>
+                            </constraints>
+                            <properties>
+                              <updateSelectionOnSort value="true"/>
+                            </properties>
+                          </component>
+                        </children>
                       </grid>
                     </children>
                   </scrollpane>
@@ -180,7 +201,7 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-5214789"/>
+                      <background color="-1"/>
                     </properties>
                     <border type="none"/>
                     <children>

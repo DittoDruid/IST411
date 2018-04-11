@@ -38,7 +38,7 @@
               <verticalTextPosition value="0"/>
             </properties>
           </component>
-          <component id="c5954" class="javax.swing.JPasswordField" binding="passwordField1" default-binding="true">
+          <component id="c5954" class="javax.swing.JPasswordField" binding="passwordField" default-binding="true">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -48,13 +48,13 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="8115f" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+          <component id="8115f" class="javax.swing.JTextField" binding="usernameField" default-binding="true">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <columns value="30"/>
-              <foreground color="-589828"/>
+              <foreground color="-16777216"/>
             </properties>
           </component>
           <component id="e2614" class="javax.swing.JLabel" binding="usernameLabel">
@@ -133,13 +133,6 @@
               <text value="Welcome to the Library System"/>
             </properties>
           </component>
-          <vspacer id="bc9ad">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <minimum-size width="-1" height="30"/>
-              </grid>
-            </constraints>
-          </vspacer>
           <vspacer id="9e448">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
@@ -147,6 +140,31 @@
               </grid>
             </constraints>
           </vspacer>
+          <grid id="6e005" binding="errorMsg" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="549" height="24"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-4144960"/>
+              <foreground color="-12632513"/>
+              <visible value="false"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="19a8a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-4508130"/>
+                  <text value="Unable to log in: username or password missing."/>
+                </properties>
+              </component>
+            </children>
+          </grid>
         </children>
       </grid>
     </children>

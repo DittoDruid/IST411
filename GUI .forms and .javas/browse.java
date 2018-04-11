@@ -1,13 +1,31 @@
 package libthing;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class browse {
     private JPanel bigPanel;
-    private JTextField textField1;
+    private JTextField browseSearchBox;
     private JButton searchButton;
-    private JComboBox comboBox1;
+    private JComboBox materialTypeBox;
     private JTabbedPane tabbedPane1;
+    private JTable browseQueryResults;
+
+    public browse() {
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+                String materialTypeStr = materialTypeBox.getSelectedItem().toString();
+                System.out.println(materialTypeStr);
+                String browseSearchTerm = browseSearchBox.getText();
+                System.out.println(browseSearchTerm);
+
+            }
+        });
+    }
 
     public void browse(){
 
@@ -19,4 +37,8 @@ public class browse {
     }
 
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+
+    }
 }
