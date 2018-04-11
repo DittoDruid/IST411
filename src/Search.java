@@ -32,7 +32,7 @@ public class Search {
             String articles = "article";
         }
         else{   //All is selected.
-            String all = material;
+            String all = null;
         }        
     }    
 }
